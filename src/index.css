@@ -346,6 +346,14 @@ body {
   box-shadow: 0 2px 24px 0 rgba(120, 80, 180, 0.13);
 }
 
+.video-card video::-webkit-media-controls-fullscreen-button {
+  display: none;
+}
+
+.video-card video::-webkit-media-controls-overflow-button {
+  display: none;
+}
+
 .reel-card {
   max-width: 320px;
   padding: 0.5rem 0.5rem 1.2rem 0.5rem;

@@ -480,6 +480,7 @@ function App() {
             disablePictureInPicture
             controlsList="nodownload noplaybackrate noremoteplayback nofullscreen"
             onContextMenu={(event) => event.preventDefault()}
+            onDoubleClick={(event) => event.preventDefault()}
             onPlay={() => {
               if (audioRef.current) {
                 audioRef.current.pause()
