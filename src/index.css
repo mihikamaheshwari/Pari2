@@ -644,16 +644,23 @@ body {
   }
 
   .slideshow-card {
-    min-height: 540px;
+    min-height: 0;
     padding: 1rem;
   }
 
   .slide {
+    position: absolute;
     width: calc(100% - 2rem);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(0) !important;
   }
 
   .slide.active {
-    transform: translateX(0) scale(1);
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0) scale(1) !important;
   }
 
   .special-grid,
