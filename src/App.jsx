@@ -469,6 +469,10 @@ function App() {
             controls
             src="/videos/reel-v2.mp4?v=2"
             preload="metadata"
+            playsInline
+            disablePictureInPicture
+            controlsList="nodownload noplaybackrate noremoteplayback nofullscreen"
+            onContextMenu={(event) => event.preventDefault()}
             onPlay={() => {
               if (audioRef.current) {
                 audioRef.current.pause()
