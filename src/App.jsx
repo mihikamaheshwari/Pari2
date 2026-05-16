@@ -402,9 +402,15 @@ function App() {
             <article
               key={slide.image}
               className={`slide ${index === slideIndex ? 'active' : ''}`}
-              style={{ transform: `translateX(${(index - slideIndex) * 108}%)` }}
+              style={{
+                transform: `translateX(${(index - slideIndex) * 108}%) scale(${index === slideIndex ? 1 : 0.97})`,
+              }}
             >
-              <img src={slide.image} alt="Memory placeholder" />
+              <img
+                src={slide.image}
+                alt="Memory placeholder"
+                className="w-full h-auto object-cover"
+              />
               <h3>{slide.caption}</h3>
               <p>{slide.moment}</p>
             </article>
