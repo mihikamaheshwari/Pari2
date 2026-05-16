@@ -38,17 +38,17 @@ const memorySlides = [
     moment: 'A memory I will keep forever',
   },
   {
-    image: '/memories/memory-7.jpeg',
+    image: '/memories/memory-14.jpeg',
     caption: 'And a little bit family time.',
     moment: 'I love uncle auntyy',
   },
   {
-    image: '/memories/memory-11.jpeg',
+    image: '/memories/memory-15.jpeg',
     caption: 'Throwback to good old kota phase.',
     moment: 'Pure nostalgia',
   },
   {
-    image: '/memories/memory-12.jpeg',
+    image: '/memories/memory-18.jpeg',
     caption: 'Cheers to being this chhapri.',
     moment: 'Another chapter',
   },
@@ -63,24 +63,14 @@ const memorySlides = [
     moment: 'New memory drop',
   },
   {
-    image: '/memories/memory-15.jpeg',
-    caption: 'Still us, still chaos, still home.',
-    moment: 'One more favorite',
-  },
-  {
     image: '/memories/memory-16.jpeg',
-    caption: 'This one feels straight out of our story.',
+    caption: 'Therapy.',
     moment: 'Fresh chapter',
   },
   {
     image: '/memories/memory-17.jpeg',
     caption: 'Could not skip this picture at all.',
-    moment: 'Too good to miss',
-  },
-  {
-    image: '/memories/memory-18.jpeg',
-    caption: 'Saving this smile forever.',
-    moment: 'Latest memory',
+    moment: 'Too cute to miss',
   },
 ]
 
