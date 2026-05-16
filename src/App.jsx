@@ -223,7 +223,6 @@ function App() {
   const [progress, setProgress] = useState(0)
   const [videoInView, setVideoInView] = useState(false)
   const [daysTogether, setDaysTogether] = useState(0)
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768)
   const trailRef = useRef(null)
   const glowRef = useRef(null)
   const audioRef = useRef(null)
@@ -248,14 +247,6 @@ function App() {
       setSlideIndex((previous) => (previous + 1) % memorySlides.length)
     }, 5000)
     return () => clearInterval(interval)
-  }, [])
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
   useEffect(() => {
@@ -407,22 +398,19 @@ function App() {
       <section className="section memory-section" id="surprise">
         <h2 className="section-title">Our Memory Reel</h2>
         <div className="slideshow-card">
-          {(isMobile ? [memorySlides[slideIndex]] : memorySlides).map((slide, index) => (
+          {memorySlides.map((slide, index) => (
             <article
-              key={`${slide.image}-${isMobile ? slideIndex : index}`}
-              className={`slide ${isMobile || index === slideIndex ? 'active' : ''}`}
-              style={
-                isMobile
-                  ? undefined
-                  : {
-                    transform: `translateX(${(index - slideIndex) * 108}%) scale(${index === slideIndex ? 1 : 0.97})`,
-                  }
-              }
+              key={slide.image}
+              className={`slide ${index === slideIndex ? 'active' : ''}`}
+              style={{
+                transform: `translateX(${(index - slideIndex) * 108}%) scale(${index === slideIndex ? 1 : 0.97})`,
+              }}
             >
               <img
                 src={slide.image}
                 alt="Memory placeholder"
                 className="w-full h-auto object-cover"
+                loading="eager"
               />
               <h3>{slide.caption}</h3>
               <p>{slide.moment}</p>
