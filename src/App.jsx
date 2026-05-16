@@ -57,6 +57,31 @@ const memorySlides = [
     caption: 'I mean , it was a phase.',
     moment: 'Embarassing yet cute',
   },
+  {
+    image: '/memories/memory-14.jpeg',
+    caption: 'Another frame we had to keep forever.',
+    moment: 'New memory drop',
+  },
+  {
+    image: '/memories/memory-15.jpeg',
+    caption: 'Still us, still chaos, still home.',
+    moment: 'One more favorite',
+  },
+  {
+    image: '/memories/memory-16.jpeg',
+    caption: 'This one feels straight out of our story.',
+    moment: 'Fresh chapter',
+  },
+  {
+    image: '/memories/memory-17.jpeg',
+    caption: 'Could not skip this picture at all.',
+    moment: 'Too good to miss',
+  },
+  {
+    image: '/memories/memory-18.jpeg',
+    caption: 'Saving this smile forever.',
+    moment: 'Latest memory',
+  },
 ]
 
 const reasons = [
